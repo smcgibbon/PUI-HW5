@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MuddyPaws</title>
+    <meta charset="UTF-8">
+    <!-- styles -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed" rel="stylesheet">
+    <!-- Font-Awesome Library used for star rating graphics -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <!-- Nav Bar -->
+  <header>
+    <div class="container">
+      <a href="#"><img src="assets/logo.png" id="logo"> </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="results.html">Shop</a></li>
+          <li><a href="#">About</a></li>
+
+          <a href="#"><img src="assets/user.png" id="user"> </a>
+          <a href="#"><img src="assets/cart.png" id="cart"> </a>
+        </ul>
+      </nav>
+    </div>
+
+  </header>
+
+  <!-- Subheader container for backbutton -->
+  <section id="subheader">
+    <a href="results.html">
+      <button id="back-button2"><strong>< Back</strong></button>
+    </a>
+  </section>
+
+  <!-- Left column contains primary product image and 4 thumbnails for alternative product views -->
+  <section id="left-column-product">
+    <container id="image-container">
+
+      <a href="#">
+        <div id="image-holder-main">
+          <img src="assets/Results6.png" alt="Dog Backpack" id="product-image-main" height="300" width="300">
+        </div>
+      </a>
+
+      <ul>
+        <div id="image-holder-thumbnail">
+          <img src="assets/Vest5.png" alt="Dog Backpack" id="product-image-thumbnail" height=70 width=70>
+        </div>
+        <div id="image-holder-thumbnail">
+          <img src="assets/Vest6.png" alt="Dog Backpack" id="product-image-thumbnail" height=70 width=70>
+        </div>
+        <div id="image-holder-thumbnail">
+          <img src="assets/Vest7.png" alt="Dog Backpack" id="product-image-thumbnail" height=70 width=70>
+        </div>
+        <div id="image-holder-thumbnail">
+          <img src="assets/Results6.png" alt="Dog Backpack" id="product-image-thumbnail" height=70 width=70>
+        </div>
+      </ul>
+
+    </container>
+
+  </section>
+
+  <!-- Right column contains Product info (title, rating, price) and product options form (size, color, quantity, addcart) -->
+  <section id="right-column-product">
+    <div id="product-header">
+      <h3 id="product-title">RuggedPup Vest</h3>
+
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+      <span class="rating">(126)</span>
+      <div id="product-price">
+        <span><strong>Price:</strong></span>
+        <span class="price">$79.99</span>
+      </div>
+    </div>
+
+    <!-- product options form includes selectors for size, color, quantity, addcart -->
+    <div id="product-options">
+
+      <div id="size-selector">
+        <p><strong>Size:</strong> Medium <p>
+        <button id="size-button">Tiny</button>
+        <button id="size-button">Small</button>
+        <button id="size-button">Medium</button>
+        <button id="size-button">Large</button>
+      </div>
+
+      <div id="color-selector">
+        <p id="product-color"><strong>Color: </strong>Mud/Silver</p>
+        <ul>
+          <div id="color-image-thumbnail-holder">
+            <img id="color-image-thumbnail" src="assets/Vest2.png" alt="Dog Backpack" height=60 width=60>
+          </div>
+          <div id="color-image-thumbnail-holder">
+            <img id="color-image-thumbnail"  src="assets/Vest3.png" alt="Dog Backpack" height=60 width=60>
+          </div>
+          <div id="color-image-thumbnail-holder">
+            <img id="color-image-thumbnail" src="assets/Vest4.png" alt="Dog Backpack" height=60 width=60>
+          </div>
+          <div id="color-image-thumbnail-holder">
+            <img id="color-image-thumbnail" src="assets/Results6.png" alt="Dog Backpack" height=60 width=60>
+          </div>
+        </ul>
+      </div>
+
+      <div id="quantity-selector">
+        <p><strong>Quantity:</strong></p>
+        <button id="sub-quantity-button"> - </button>
+        <div id="quantity-holder"> 1 </div>
+        <button id="add-quantity-button"> + </button>
+
+      </div>
+
+      <button id="addtocart-button">+ Add to Cart</button>
+
+    </div>
+
+  </section>
+
+</body>
+
+</html>
