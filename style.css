@@ -49,6 +49,12 @@ p {
     font-family: arial;
 }
 
+span {
+    text-decoration: none;
+    -webkit-appearance: none;
+    font-family: arial;
+}
+
 
 .button {
   cursor: pointer;
@@ -73,7 +79,7 @@ p {
 
 .centered {
     position: relative;
-    top: 50%;
+    top: 100%;
     left: 40%;
     transform: translate(-50%, -50%);
     font-family: 'Fira Sans Extra Condensed', sans-serif;
@@ -109,7 +115,7 @@ p {
 }
 
 .price {
-  color: red;
+  color: #D45151;
   font-weight: bold;
   font-size: 18px;
   font-family: arial;
@@ -199,7 +205,7 @@ p {
   margin: 30px 10px 10px;;
   text-decoration: none;
   color: white;
-  background-color: #28E097;
+  background-color: #DEDEDE;
   font-family: 'Varela Round', sans-serif;
   font-size: 20px;
   font-weight: bold;
@@ -209,7 +215,7 @@ p {
   -moz-appearance: none;
 }
 
-#add-quantity-button {
+.add-quantity-button {
   display: inline-block;
   position: relative;
   border-style: solid;
@@ -228,7 +234,7 @@ p {
   -moz-appearance: none;
 }
 
-#arrowleft {
+.arrowleft {
   float: left;
   top: 60%;
   left: 50%;
@@ -236,14 +242,14 @@ p {
   margin-left: 20px;
 }
 
-#arrowleft2 {
+.arrowleft2 {
   float: left;
   list-style: none;
   margin-left: 20px;
   margin-top: 100px;
 }
 
-#arrowright {
+.arrowright {
   float: right;
   top: 60%;
   left: 50%;
@@ -251,7 +257,7 @@ p {
   margin-right: 20px;
 }
 
-#arrowright2 {
+.arrowright2 {
     float: right;
     list-style: none;
     margin-right: 30px;
@@ -279,7 +285,7 @@ p {
 #back-button2 {
   display: inline-block;
   position: relative;
-  left: 10%;
+  left: 7%;
   top: 23%;
   border: none;
   padding: 16px 32px;
@@ -303,13 +309,16 @@ p {
   float: right;
   margin-left: 50px;
   padding-top: 30px;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 20px
 }
 
-#color-image-thumbnail {
+.color-image-thumbnail {
   padding: 5px
 }
 
-#color-image-thumbnail-holder {
+.color-selector button {
+  border: 3px solid #DEDEDE;
   border-radius: 15px;
   flex: 0 0 auto;
   margin: 8px 1%;
@@ -317,10 +326,23 @@ p {
   display: inline-block;
   min-height: 50px;
   min-width: 50px;
-  border-style: solid;
-  border-width: 3px;
-  border-color: #DEDEDE;
   cursor: pointer;
+  transition: all .5s;
+}
+
+.color-selector button:hover,
+.color-selector button:active,
+.color-selector button:focus {
+  border: 3px solid #86939E;
+  border-radius: 15px;
+  flex: 0 0 auto;
+  margin: 8px 1%;
+  position: relative;
+  display: inline-block;
+  min-height: 50px;
+  min-width: 50px;
+  cursor: pointer;
+  transition: all .5s;
 }
 
 #explore {
@@ -393,16 +415,31 @@ p {
   position: relative;
 }
 
-#image-holder-thumbnail {
+.image-holder-thumbnail {
   flex: 0 0 auto;
-  margin: 0 auto;
-  position: relative;
-  display: inline-block;
+  display: inline-flex;
+  margin-right: 6px;
   min-height: 80px;
   min-width: 80px;
   border-style: solid;
   border-width: 3px;
   border-color: #DEDEDE;
+}
+
+.thumbnail-container {
+  margin-left: 168px;
+  margin-top: 0;
+  display: inline-flex;
+  flex-direction: row;
+}
+
+.image-holder-cart {
+  flex: 0 0 auto;
+  margin: 0 20px;
+  position: relative;
+  display: inline-block;
+  min-height: 80px;
+  min-width: 80px;
 }
 
 #left-column-home {
@@ -423,14 +460,18 @@ p {
   position: relative;
 }
 
-#left-column-product ul {
-  width: 400px;
+
+#left-column-cart {
+  float: left;
+  width: 60%;
+  height: 600px;
+  margin-right: 10px;
   position: relative;
-  left: 165px;
+  left: 120px;
   bottom: 20px;
 }
 
-#logo {
+.logo {
   float: left;
   padding: 10px 0;
 }
@@ -440,7 +481,7 @@ p {
   margin-top: 20px;
 }
 
-#product-header {
+.product-header {
   margin-bottom: 30px;
 }
 
@@ -455,6 +496,10 @@ p {
   padding: 10px;
 }
 
+.cart-image-thumbnail {
+  padding: 10px;
+}
+
 #product-price {
   text-decoration: none;
   -webkit-appearance: none;
@@ -462,7 +507,12 @@ p {
   margin: 10px auto auto;
 }
 
-#product-title {
+.cart-price {
+  font-family: arial;
+  margin: 0 auto;
+}
+
+.product-title {
   margin-top: 0;
   margin-bottom: 5px;
 }
@@ -475,6 +525,24 @@ p {
   border-color: #979797;
   border-width: 1px;
   padding: 5px 60px;
+  margin: 0 5px;
+  text-decoration: none;
+  color: black;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+}
+
+#quantity-holder-cart {
+  display: inline-block;
+  position: relative;
+  border-style: solid;
+  border-radius: 8px;
+  border-color: #979797;
+  border-width: 1px;
+  padding: 5px 30px;
   margin: 0 5px;
   text-decoration: none;
   color: black;
@@ -524,7 +592,13 @@ p {
   margin-top:10px;
 }
 
-#see-all-button {
+#right-column-cart {
+  width: 25%;
+  float: right;
+  margin-right: 20px;
+}
+
+.see-all-button {
   float: right;
   border-style: solid;
   border-color: black;
@@ -541,7 +615,7 @@ p {
   cursor: pointer;
 }
 
-#size-button {
+.size-button {
   display: inline-block;
   position: relative;
   border-style: solid;
@@ -559,13 +633,18 @@ p {
   -moz-appearance: none;
 }
 
-#subheader {
+.size-button.active {
+  border-color: "#17B1DB";
+  border-width: medium;
+}
+
+.subheader {
   height: 80px;
   margin: 0 0 8px;
   padding: 0 8px;
 }
 
-#sub-quantity-button {
+.sub-quantity-button {
   display: inline-block;
   position: relative;
   border-style: solid;
@@ -586,7 +665,7 @@ p {
   -moz-appearance: none;
 }
 
-#title {
+.title {
   position: relative;
   bottom: 12px;
 }
@@ -600,4 +679,164 @@ p {
 #vl {
   border-left: 3px solid #353535;
   height: 80px;
+}
+
+.product-title-cart {
+  font-family: arial;
+}
+
+.link-text {
+  color: #4363CB;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cart-container {
+  margin-top: 3px;
+  border-style: solid;
+  border-color: #DEDEDE;
+}
+
+.cart-row {
+  border-bottom-style: solid;
+  border-color: #DEDEDE;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+}
+
+
+#cart-header {
+
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+#cart-item-label {
+  margin-right: 145px;
+}
+
+.cart-header-label {
+  font-family: 'Varela Round', sans-serif;
+  color: #A5A5A5;
+  margin: 0 80px;
+}
+
+.cart-block {
+}
+
+.product-cart-info {
+  width: 180px;
+}
+
+.product-cart-info p {
+  margin: 3px auto;
+}
+
+.product-cart-info h4 {
+  margin: 0 auto 15px;
+}
+
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+
+#remove-cart {
+  margin-top: 10px;
+}
+
+#cart-summary {
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-right-style: solid;
+  border-bottom-color: #DEDEDE;
+  border-left-color: #DEDEDE;
+  border-right-color: #DEDEDE;
+}
+
+#cart-summary-header {
+  background-color: #17B1DB;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 15px;
+}
+
+#cart-summary-header h4 {
+  font-size: 20px;
+  margin: 0 auto;
+}
+
+#cart-summary-total {
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-color: #DEDEDE;
+  border-bottom-color: #DEDEDE;
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+  padding: 10px 0;
+}
+
+#cart-summary-breakdown {
+  margin: 30px 20px 0;
+}
+
+#checkout-button{
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  border-style: solid;
+  border-radius: 15px;
+  padding: 16px 64px;
+  margin: 20px 30px 20px;
+  text-decoration: none;
+  color: white;
+  background-color: #28E097;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+
+}
+
+#cart-summary-body {
+
+}
+
+#button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cart-summary-price {
+  float: right;
+}
+
+#cart-title {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 32px;
+  padding-left: 120px;
+  padding-bottom: 20px;
+}
+
+/* ********/
+
+.qty {
+    width: 40px;
+    height: 25px;
+    text-align: center;
+}
+/* Product Color */
+
+.size-selector {
+  margin-bottom: 20px;
 }
